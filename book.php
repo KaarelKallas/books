@@ -1,3 +1,18 @@
 <?php
+require_once 'connection.php';
+$stmt = $pdo->prepare('SELECT * FROM authors WHERE first_name =:first_name');
 
-echo $_GET['id'];
+$stmt->execute([':first_name' => $_GET['name']]);
+$author = $stmt->fetch();
+
+var_dump($author);
+echo "<br><br>";
+echo $author['last_name'];
+
+
+
+
+
+
+$bookid = $_GET['id'];
+echo $bookid;
