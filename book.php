@@ -21,9 +21,8 @@ $book = $stmt->fetch();
     <p>Väljalaske aasta: <?php echo $book['release_date']; ?></p>
     <p>Autor: <?php echo $book['first_name']; ?> <?php echo $book['last_name']; ?></p>
     <p>Hind: <?php echo $book['price']; ?></p>
-    <a href="edit.php?id=<?=$bookId?>">
-        EDIT
-    </a>
+    <a href="edit.php?id=<?=$bookId?>">EDIT</a>
+    <a href="add.php?id=<?=$bookId?>">ADD</a>
     <a href="delete.php?id=<?=$bookId?>">DELETE</a>
     </body>
 
